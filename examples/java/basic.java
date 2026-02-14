@@ -12,13 +12,8 @@ public class BasicExample {
         VariableNameConverterAPIClient client = new VariableNameConverterAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Request body
-            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
-        parameters.put(&quot;variables&quot;, myVariableName,another_var_name,SomeClassName,kebab-case-name,CONSTANT_VALUE);
-        parameters.put(&quot;to&quot;, &quot;snake_case&quot;);
-
-            // Execute the API request
-            APIResponse response = client.execute(parameters);
+            // Execute the API request (no parameters required)
+            APIResponse response = client.execute(null);
 
             // Check if the request was successful
             if (response.isSuccess()) {
