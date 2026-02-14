@@ -1,23 +1,25 @@
 openapi: 3.0.4
 info:
   title: Variable Name Converter
-  description: Variable Name Converter transforms variable names between different naming conventions including camelCase, snake_case, PascalCase, and kebab-case.
+  description: >-
+    Variable Name Converter transforms variable names between different naming
+    conventions including camelCase, snake_case, PascalCase, and kebab-case.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/variablenameconverter:
     post:
       summary: Convert Variable Names
-      description: Variable Name Converter transforms variable names between different naming conventions including camelCase, snake_case, PascalCase, and kebab-case.
+      description: Convert variable names between naming conventions
       operationId: variablenameconverter
       parameters: []
       responses:
@@ -35,23 +37,23 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   results:
-                  - original: myVariableName
-                    converted: my_variable_name
-                  - original: another_var_name
-                    converted: another_var_name
-                  - original: SomeClassName
-                    converted: some_class_name
-                  - original: kebab-case-name
-                    converted: kebab_case_name
-                  - original: CONSTANT_VALUE
-                    converted: c_o_n_s_t_a_n_t__v_a_l_u_e
+                    - original: myVariableName
+                      converted: my_variable_name
+                    - original: another_var_name
+                      converted: another_var_name
+                    - original: SomeClassName
+                      converted: some_class_name
+                    - original: kebab-case-name
+                      converted: kebab_case_name
+                    - original: CONSTANT_VALUE
+                      converted: c_o_n_s_t_a_n_t__v_a_l_u_e
                   count: 5
                   targetFormat: snake_case
         '401':
@@ -59,7 +61,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -68,29 +70,16 @@ paths:
               type: object
               properties:
                 variables:
-                  type: array
+                  type: string
                   description: Array of variable names to convert (max 100)
-                  example:
-                  - myVariableName
-                  - another_var_name
-                  - SomeClassName
-                  - kebab-case-name
-                  - CONSTANT_VALUE
                 to:
                   type: string
-                  description: 'Target naming convention: camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE'
-                  example: snake_case
+                  description: >-
+                    Target naming convention: camelCase, PascalCase, snake_case,
+                    kebab-case, CONSTANT_CASE
               required:
-              - variables
-              - to
-              example:
-                variables:
-                - myVariableName
-                - another_var_name
-                - SomeClassName
-                - kebab-case-name
-                - CONSTANT_VALUE
-                to: snake_case
+                - variables
+                - to
 components:
   securitySchemes:
     api_key:
@@ -98,4 +87,12 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  variables:
+    - myVariableName
+    - another_var_name
+    - SomeClassName
+    - kebab-case-name
+    - CONSTANT_VALUE
+  to: snake_case
