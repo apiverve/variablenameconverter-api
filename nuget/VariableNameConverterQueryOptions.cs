@@ -12,14 +12,12 @@ namespace APIVerve.API.VariableNameConverter
     {
         /// <summary>
         /// Array of variable names to convert (max 100)
-        /// Example: ["myVariable","another_var"]
         /// </summary>
         [JsonProperty("variables")]
         public string Variables { get; set; }
 
         /// <summary>
         /// Target naming convention: camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE
-        /// Example: camelCase
         /// </summary>
         [JsonProperty("to")]
         public string To { get; set; }
