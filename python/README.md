@@ -44,7 +44,10 @@ from apiverve_variablenameconverter.apiClient import VariablenameconverterAPICli
 # Initialize the client with your APIVerve API key
 api = VariablenameconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "variables": [ "myVariableName", "another_var_name", "SomeClassName", "kebab-case-name", "CONSTANT_VALUE" ], "to": "snake_case" }
+query = {
+    "variables": ["myVariableName","another_var_name","SomeClassName","kebab-case-name","CONSTANT_VALUE"],
+    "to": "snake_case"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "variables": [ "myVariableName", "another_var_name", "SomeClassName", "kebab-case-name", "CONSTANT_VALUE" ], "to": "snake_case" }
+query = {
+    "variables": ["myVariableName","another_var_name","SomeClassName","kebab-case-name","CONSTANT_VALUE"],
+    "to": "snake_case"
+}
 ```
 
 ###### Simple Request
@@ -143,7 +149,10 @@ from apiverve_variablenameconverter.apiClient import VariablenameconverterAPICli
 
 api = VariablenameconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "variables": [ "myVariableName", "another_var_name", "SomeClassName", "kebab-case-name", "CONSTANT_VALUE" ], "to": "snake_case" }
+query = {
+    "variables": ["myVariableName","another_var_name","SomeClassName","kebab-case-name","CONSTANT_VALUE"],
+    "to": "snake_case"
+}
 
 try:
     result = api.execute(query)
@@ -164,7 +173,10 @@ from apiverve_variablenameconverter.apiClient import VariablenameconverterAPICli
 
 api = VariablenameconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "variables": [ "myVariableName", "another_var_name", "SomeClassName", "kebab-case-name", "CONSTANT_VALUE" ], "to": "snake_case" }
+query = {
+    "variables": ["myVariableName","another_var_name","SomeClassName","kebab-case-name","CONSTANT_VALUE"],
+    "to": "snake_case"
+}
 
 try:
     result = api.execute(query)
@@ -198,7 +210,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_variablenameconverter.apiClient import VariablenameconverterAPIClient, VariablenameconverterAPIClientError
 
-query = { "variables": [ "myVariableName", "another_var_name", "SomeClassName", "kebab-case-name", "CONSTANT_VALUE" ], "to": "snake_case" }
+query = {
+    "variables": ["myVariableName","another_var_name","SomeClassName","kebab-case-name","CONSTANT_VALUE"],
+    "to": "snake_case"
+}
 
 # Using context manager ensures proper cleanup
 with VariablenameconverterAPIClient("[YOUR_API_KEY]") as api:
@@ -224,7 +239,10 @@ from apiverve_variablenameconverter.apiClient import VariablenameconverterAPICli
 # Enable debug mode
 api = VariablenameconverterAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "variables": [ "myVariableName", "another_var_name", "SomeClassName", "kebab-case-name", "CONSTANT_VALUE" ], "to": "snake_case" }
+query = {
+    "variables": ["myVariableName","another_var_name","SomeClassName","kebab-case-name","CONSTANT_VALUE"],
+    "to": "snake_case"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -239,8 +257,12 @@ from apiverve_variablenameconverter.apiClient import VariablenameconverterAPICli
 
 api = VariablenameconverterAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "variables": ["myVariableName","another_var_name","SomeClassName","kebab-case-name","CONSTANT_VALUE"],
+    "to": "snake_case"
+}
+
 try:
-    query = { "variables": [ "myVariableName", "another_var_name", "SomeClassName", "kebab-case-name", "CONSTANT_VALUE" ], "to": "snake_case" }
     result = api.execute(query)
     print(result)
 finally:
