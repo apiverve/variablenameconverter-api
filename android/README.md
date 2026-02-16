@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:variablenameconverter-api:1.1.13'
+    implementation 'com.github.apiverve:variablenameconverter-api:1.1.14'
 }
 ```
 
@@ -47,8 +47,8 @@ VariableNameConverterAPIClient client = new VariableNameConverterAPIClient("YOUR
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("variables", new ArrayList<>());
-    parameters.put("to", "camelCase");
+    parameters.put("variables", Arrays.asList("myVariableName", "another_var_name", "SomeClassName", "kebab-case-name", "CONSTANT_VALUE"));
+    parameters.put("to", "snake_case");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
