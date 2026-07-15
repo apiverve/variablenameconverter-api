@@ -14,14 +14,27 @@ API_URL = 'https://api.apiverve.com/v1/variablenameconverter'
 
 def call_variablenameconverter_api():
     """
-    Make a GET request to the Variable Name Converter API
+    Make a POST request to the Variable Name Converter API
     """
     try:
+        # Request body
+        request_body &#x3D; {
+    &#x27;variables&#x27;: [
+        &#x27;myVariableName&#x27;,
+        &#x27;another_var_name&#x27;,
+        &#x27;SomeClassName&#x27;,
+        &#x27;kebab-case-name&#x27;,
+        &#x27;CONSTANT_VALUE&#x27;
+    ],
+    &#x27;to&#x27;: &#x27;snake_case&#x27;
+}
+
         headers = {
-            'x-api-key': API_KEY
+            'x-api-key': API_KEY,
+            'Content-Type': 'application/json'
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.post(API_URL, headers=headers, json=request_body)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
