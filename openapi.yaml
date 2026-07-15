@@ -74,9 +74,7 @@ paths:
                   description: Array of variable names to convert (max 100)
                 to:
                   type: string
-                  description: >-
-                    Target naming convention: camelCase, PascalCase, snake_case,
-                    kebab-case, CONSTANT_CASE
+                  description: Target naming convention
               required:
                 - variables
                 - to
