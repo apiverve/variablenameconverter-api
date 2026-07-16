@@ -25,6 +25,9 @@ namespace APIVerve.API.VariableNameConverter
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,7 +36,7 @@ namespace APIVerve.API.VariableNameConverter
         public Result[] Results { get; set; }
 
         [JsonProperty("count")]
-        public long Count { get; set; }
+        public long? Count { get; set; }
 
         [JsonProperty("targetFormat")]
         public string TargetFormat { get; set; }
@@ -46,5 +49,17 @@ namespace APIVerve.API.VariableNameConverter
 
         [JsonProperty("converted")]
         public string Converted { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
