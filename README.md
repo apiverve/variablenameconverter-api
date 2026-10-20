@@ -1,13 +1,13 @@
-# [Variable Name Converter API](https://apiverve.com/marketplace/variablenameconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Variable Name Converter API](https://apiverve.com/marketplace/variablenameconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
 Variable Name Converter transforms variable names between different naming conventions including camelCase, snake_case, PascalCase, and kebab-case.
 
 The Variable Name Converter API provides a simple, reliable way to integrate variable name converter functionality into your applications. Built for developers who need production-ready variable name converter capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/variablenameconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/variablenameconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/variablenameconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/variablenameconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-POST-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -181,7 +181,7 @@ go get github.com/apiverve/variablenameconverter-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Variable Name Converter API](https://apiverve.com/marketplace/variablenameconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Variable Name Converter API](https://apiverve.com/marketplace/variablenameconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/variablenameconverter](https://docs.apiverve.com/ref/variablenameconverter)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -211,11 +211,51 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Variable Name Converter API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "results": [
+      {
+        "original": "myVariableName",
+        "converted": "my_variable_name"
+      },
+      {
+        "original": "another_var_name",
+        "converted": "another_var_name"
+      },
+      {
+        "original": "SomeClassName",
+        "converted": "some_class_name"
+      },
+      {
+        "original": "kebab-case-name",
+        "converted": "kebab_case_name"
+      },
+      {
+        "original": "CONSTANT_VALUE",
+        "converted": "c_o_n_s_t_a_n_t__v_a_l_u_e"
+      }
+    ],
+    "count": 5,
+    "targetFormat": "snake_case"
+  }
 }
 ```
 
@@ -223,7 +263,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Variable Name Converter API](https://apiverve.com/marketplace/variablenameconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Variable Name Converter API](https://apiverve.com/marketplace/variablenameconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

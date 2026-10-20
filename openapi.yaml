@@ -18,7 +18,7 @@ servers:
 paths:
   /v1/variablenameconverter:
     post:
-      summary: Convert Variable Names
+      summary: Variable Name Converter
       description: Convert variable names between naming conventions
       operationId: variablenameconverter
       parameters: []
@@ -71,7 +71,9 @@ paths:
               properties:
                 variables:
                   type: string
-                  description: Array of variable names to convert (max 100)
+                  description: >-
+                    Array of variable names to convert (max 100). Every entry
+                    must be a string.
                 to:
                   type: string
                   description: Target naming convention
