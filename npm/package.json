@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/variablenameconverter",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Variable Name Converter transforms variable names between different naming conventions including camelCase, snake_case, PascalCase, and kebab-case.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/variablenameconverter-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/variablenameconverter?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/variablenameconverter?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
