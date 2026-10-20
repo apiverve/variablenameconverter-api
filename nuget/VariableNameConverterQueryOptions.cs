@@ -11,7 +11,7 @@ namespace APIVerve.API.VariableNameConverter
     public class VariableNameConverterQueryOptions
     {
         /// <summary>
-        /// Array of variable names to convert (max 100)
+        /// Array of variable names to convert (max 100). Every entry must be a string.
         /// </summary>
         [JsonProperty("variables")]
         public List<string> Variables { get; set; }
