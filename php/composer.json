@@ -1,7 +1,7 @@
 {
     "name": "apiverve/variablenameconverter",
     "description": "Variable Name Converter transforms variable names between different naming conventions including camelCase, snake_case, PascalCase, and kebab-case.",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "type": "library",
     "license": "MIT",
     "authors": [
