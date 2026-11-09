@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/variablenameconverter",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Variable Name Converter transforms variable names between different naming conventions including camelCase, snake_case, PascalCase, and kebab-case.",
   "main": "index.js",
   "types": "index.d.ts",
